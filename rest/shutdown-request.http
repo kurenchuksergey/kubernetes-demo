@@ -1,2 +1,2 @@
 
-POST localhost:8080/actuator/shutdown
+POST /shutdown

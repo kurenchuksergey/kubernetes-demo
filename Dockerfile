@@ -5,7 +5,7 @@ RUN mkdir -p ${APP_HOME}/src/main/java
 WORKDIR ${APP_HOME}
 COPY build.gradle settings.gradle gradlew gradlew.bat ${APP_HOME}
 COPY gradle ${APP_HOME}/gradle
-COPY . .
+COPY docker .
 RUN ./gradlew bootJar
 
 FROM openjdk:11-jre
