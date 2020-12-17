@@ -11,5 +11,6 @@ FROM openjdk:11-jre
 ARG APP_HOME
 WORKDIR /root/
 COPY --from=BUILD_IMAGE ${APP_HOME}/build/libs/kubernetes-demo.jar .
+RUN ls
 EXPOSE 8080
-CMD ["java","-jar"," kubernetes-demo.jar"]
+CMD ["java","-jar","kubernetes-demo.jar"]
