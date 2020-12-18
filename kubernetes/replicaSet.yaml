@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-demo
+  labels:
+    set: my-demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      set: my-demo
+  template:
+    metadata:
+      labels:
+        set: my-demo
+    spec:
+      containers:
+        - name: my-demo-app
+          image: kurenchuksergey/kubernetes-demo:latest
